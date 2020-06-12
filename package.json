@@ -1,0 +1,22 @@
+{
+  "name": "todo-list-nodejs",
+  "version": "1.0.0",
+  "description": "It is a Todo App ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnantGupta11/Todo-List-NodeJs.git"
+  },
+  "author": "Anant Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnantGupta11/Todo-List-NodeJs/issues"
+  },
+  "homepage": "https://github.com/AnantGupta11/Todo-List-NodeJs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
