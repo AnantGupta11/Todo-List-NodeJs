@@ -36,6 +36,10 @@ app.post('/create-todo', function(req,res){
     return res.redirect('back');
 })
 
+app.get('/delete-todo',(req,res) =>{
+    
+})
+
 app.listen(port, function(err){
     if(err){
         console.log('Error in running in server', err);
