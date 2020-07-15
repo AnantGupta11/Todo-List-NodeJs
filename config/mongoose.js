@@ -1,7 +1,7 @@
 //require the library
 const mongoose =require('mongoose');
 //connect to data base
-mongoose.connect('mongodb://localhost/contacts_list_db');
+mongoose.connect('mongodb://localhost/todos_list_db');
 
 // accuire the connection to check if it is successful
 const db=mongoose.connection;
