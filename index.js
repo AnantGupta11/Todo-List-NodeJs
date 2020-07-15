@@ -3,6 +3,8 @@ const path= require('path');
 const { title } = require('process');
 
 const port =8000;
+
+const db=require('./config/mongoose');
 // for firing up express server
 const app= express();
 
@@ -11,6 +13,7 @@ app.set('view engine','ejs');
 app.set('views', path.join(__dirname,'views'));
 app.use(express.urlencoded());
 app.use(express.static('assets'));
+
 var todo_List =[
     {
         name:"Workout"
