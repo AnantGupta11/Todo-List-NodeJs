@@ -25,10 +25,20 @@ var todo_List =[
 
 
 app.get('/', function(req, res){
-    return res.render('home',{
-        title: 'Todo-List',
-        todo_List:todo_List
+
+    // fetch all the todos
+    Todo.find({}, function(err, todos){
+        if(err){
+            console.log('Error in fetching todos from db',err);
+            return;
+        }
+        
+        return res.render('home',{
+            title: 'Todo-List',
+            todo_List:todos
+        });
     });
+    
 })
 
 app.post('/create-todo', function(req,res){
