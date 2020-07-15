@@ -19,35 +19,48 @@
         <div id="description">
           <p style="margin-bottom: 0px; margin-top: 0px;">Description</p>
             <form id="create-todo" action="/create-todo" method="POST">        
-                  <input style="border: none;" placeholder="What do you need to do?" name="name" class="add-task" id="add"/>
+                  <input style="border: none;" placeholder="What do you need to do?" name="name" class="add-task" id="add"/ required>
                   <hr>
-                <div>  
-                  <label for="category" style="margin-top: 0px; margin-bottom: 0px;">Category</label>
-                  <select id="category" name="category" style="margin-top: 0px; margin-bottom: 0px;">
-                    <option value="Choose a category">Choose a Category</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Work">Work</option>
-                    <option value="School">School</option>
-                    <option value="Cleaning">Cleaning</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <label for="Due Date" style="margin-top: 0px; margin-bottom: 0px;">Due date</label>
-                  <input type="date" id="due" name="due" style="margin-top: 0px; margin-bottom: 0px;">
+                <div id="todo-category">
+                    <div id="categorys">  
+                          <label for="Category" style="margin-top: 0px; margin-bottom: 0px;">Category</label><br>
+                          <select id="category" name="category" style="margin-top: 0px; margin-bottom: 0px;">
+                            <option value="Choose a category">Choose a Category</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="School">School</option>
+                            <option value="Cleaning">Cleaning</option>
+                            <option value="Other">Other</option>
+                          </select>
+                    </div>
+                  <div id="due-date">
+                        <label for="Due Date" style="margin-top: 0px; margin-bottom: 0px;">Due date</label>
+                        <input type="date" id="due" name="due" style="margin-top: 0px; margin-bottom: 0px;">
+
+                  </div>
+                </div>
+                <hr>
+                <div id="todo-button">
+                    <button type="submit" id="add-task"><i class="fas fa-plus-circle"></i>Add Task</button>
+                    <button type="submit" id="delete-task"><i class="fas fa-trash-alt"></i>Delete Task</button>
                 </div>
             </form>
         </div>
-        <hr>
-        <div id="todo-button">
-            <button type="submit" id="add-task"><i class="fas fa-plus-circle"></i>Add Task</button>
-            <button type="reset" id="delete-task"><i class="fas fa-trash-alt"></i>Delete Task</button>
-        </div>
+        
+        
         <hr>
         <div id="list">
           <ul id="list-item" >
             <% for( let i of todo_List) { %>
-             <li><%= i.name %></li>
-             <li><%= i.category%></li>
-             <li><%= i.due%></li>
+              <div id="show">
+                <input type="checkbox" id="check">
+                <div id="dates">
+                  <li><%= i.name %></li>
+                  <li><%= i.due%></li>
+                </div>
+                <button id="btn"><li><%= i.category%></li></button>
+              </div>      
+                                    
              <hr>
            <% } %>
             

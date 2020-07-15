@@ -33,6 +33,22 @@ h1{
   flex-direction: row;
 }
 #category{
+  width: 10rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  border: none;
+  outline: none;
+}
+input:focus {
+  outline:none;
+}
+
+#due{
+  width: 10rem;
+  border: none;
+  outline: none;
+}
+#categorys{
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -43,7 +59,7 @@ h1{
   flex-direction: column;
   height: 100%;
   width: 50%;
-  border-left: 1px solid black;
+  border-left: 3px solid black;
 }
 #todo-button{
   display: flex;
@@ -106,4 +122,16 @@ input{
 }
 input:focus {
   outline:none;
+}
+#show{
+  display: flex;
+  flex-direction: row;
+}
+#dates{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#btn{
+  margin-left: 20rem;
 }
