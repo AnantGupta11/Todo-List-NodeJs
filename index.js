@@ -2,7 +2,7 @@ const express = require('express');
 const path= require('path');
 const { title } = require('process');
 
-const port =3000;
+const port =process.env.PORT || 8000;
 
 const db=require('./config/mongoose');
 // for firing up express server
@@ -62,8 +62,18 @@ app.post('/create-todo', function(req,res){
 })
 
 app.get('/delete-todo',(req,res) =>{
-    
-})
+    //get the id from query in the ul
+    let id=req.query.id;
+
+    Todo.findByIdAndDelete(id, function(err){
+        if(err){
+            console.log('Error in deleting an object from database');
+            return;
+        }
+        return res.redirect('back');
+    })
+    // return res.redirect('back');
+});
 
 app.listen(port, function(err){
     if(err){

@@ -53,7 +53,7 @@
           <ul id="list-item" >
             <% for( let i of todo_List) { %>
               <div id="show">
-                <input type="checkbox" id="check">
+                <input type="checkbox" id="check" href="/delete-task/?id=<%= i.id%>">
                 <div id="dates">
                   <li><%= i.name %></li>
                   <li><%= i.due%></li>
