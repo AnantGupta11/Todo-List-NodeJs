@@ -1,7 +1,7 @@
 //require the library
 const mongoose =require('mongoose');
 //connect to data base
-mongoose.connect('mongodb://localhost/todos_list_db');
+mongoose.connect('mongodb+srv://ak8002749:Anant@123@cluster0.uhew4.mongodb.net/todo-list-db?retryWrites=true&w=majority',{useNewUrlParser:true});
 
 // accuire the connection to check if it is successful
 const db=mongoose.connection;
